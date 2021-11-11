@@ -2,7 +2,7 @@
 
 require_once('components/templates/header.php'); ?>
 
-    <h1>BEM VINDO</h1>
+    <h1>BEM VINDOOO</h1>
 
     
 
