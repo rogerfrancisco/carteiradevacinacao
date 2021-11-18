@@ -1,0 +1,37 @@
+@media (max-width: 600px){
+    .panel{
+        margin-left:10% !important;
+        margin-right:10% !important;
+        margin-top: 20% !important;
+    }
+
+    button{
+        font-size: large !important;
+    }
+}
+
+.panel{
+    background-color: #6385A5;
+    border-radius: 5em;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 8%;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 6% !important;
+    width: 80% !important;
+}
+
+button{
+    margin: 10% !important;
+    width: 30% !important;
+    font-size: larger !important;
+}

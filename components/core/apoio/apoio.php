@@ -32,4 +32,8 @@ class apoio{
             return true;
         }
     }
+
+    public static function verifica_post($campo){
+        return !empty($_POST[$campo]) ? $_POST[$campo] : null;
+    }
 }
