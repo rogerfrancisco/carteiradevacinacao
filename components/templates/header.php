@@ -1,4 +1,4 @@
-<?php require_once('C:/wamp64_2/www/carteiradevacinacao/components/core/sessao/validar_sessao.php');?>
+<?php include __DIR__ . '/../core/sessao/validar_sessao.php'?>
 <!DOCTYPE html>
 <html lang="en">
 
