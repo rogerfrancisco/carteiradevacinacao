@@ -8,7 +8,7 @@ $("#btn_logar").click(()=>{
         })
         .done((resposta)=>{
             if(resposta){
-                window.location.href = "index.php";
+                window.location.href = "home.php";
             }else{
                 alert('As informações não coincidem');
             }
