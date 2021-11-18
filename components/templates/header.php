@@ -1,3 +1,4 @@
+<?php require_once('C:/wamp64_2/www/carteiradevacinacao/components/core/sessao/validar_sessao.php');?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,10 +44,7 @@
                                         <a class="nav-link" href="javascript:void(0)">Unidade</a>
                                     </li>
                                 </ul>
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="text" placeholder="Search">
-                                    <button class="btn btn-primary" type="button">Search</button>
-                                </form>
+                                <button onClick="window.location.href = 'components/core/sessao/deslogar.php'">deslogar</button>
                             </div>
                         </div>
                     </nav>                   

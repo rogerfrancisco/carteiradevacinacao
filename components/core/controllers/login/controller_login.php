@@ -9,6 +9,7 @@
 
     $dados = $dao_usuario->verica_login($objeto['user'], $objeto['senha']);
     if($dados){
+        apoio::session_start();
         $_SESSION['id_usuario'] = $dados->get_id();
         $_SESSION['permissao'] = $dados->get_permissao();
         echo true;
