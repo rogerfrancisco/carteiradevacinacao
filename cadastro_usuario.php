@@ -38,14 +38,14 @@ require_once('components/templates/header.php'); ?>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="cep" class="form-label">CEP:</label>
-                        <input type="text" class="form-control" id="cep" placeholder="Digite o seu CEP" name="cep">
+                        <label for="telefone_1" class="form-label">Telefone 1:</label>
+                        <input type="text" class="form-control" id="telefone_1" placeholder="Digite o seu telefone" name="telefone">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="telefone" class="form-label">Telefone:</label>
-                        <input type="text" class="form-control" id="telefone" placeholder="Digite o seu telefone" name="telefone">
+                        <label for="telefone_2" class="form-label">Telefone 2:</label>
+                        <input type="text" class="form-control" id="telefone_2" placeholder="Digite o seu telefone" name="telefone">
                     </div>
                 </div>
                 <div class="form-check mb-3">
@@ -83,5 +83,5 @@ require_once('components/templates/header.php'); ?>
     </div>
 
 
-<script src="assets/js/cadastro_usuario.js"></script>
-<?php require_once('components/templates/footer.php'); ?>
+<?php require_once('assets/js/cadastro_usuario_js.php');
+require_once('components/templates/footer.php'); ?>

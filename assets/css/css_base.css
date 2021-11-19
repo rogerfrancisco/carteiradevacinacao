@@ -1,3 +1,10 @@
 header{
     text-align: center;
 }
+
+.panel{
+    width: 90% !important;
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 2%;
+}
