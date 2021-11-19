@@ -2,9 +2,19 @@
 
 require_once('components/templates/header.php'); ?>
 <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3>LISTA DE PESSOAS</h3>
+        <div class="panel-heading row">
+
+            <div class="col-md-10">
+                <h3>LISTA DE PESSOAS</h3>
+            </div>
+
+            <div class="col-md-2">
+                <button type="button" class="btn btn-primary">Cadastro Usuário</button>
+            </div>
+            
         </div>
+
+
         <div class="panel-body">
             <table id="tab_pessoas">
                 <thead>
