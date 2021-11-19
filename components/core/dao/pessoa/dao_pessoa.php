@@ -87,13 +87,13 @@ class dao_pessoa{
     }
 
     private function bind_all($sql, $pessoa){
-        $sql->bindParam(":cpf", $pessoa->get_cpf(), PDO::PARAM_STR);
-        $sql->bindParam(":nome", $pessoa->get_nome(), PDO::PARAM_STR);
-        $sql->bindParam(":nome_mae", $pessoa->get_nome_mae(), PDO::PARAM_STR);
-        $sql->bindParam(":cartao_sus", $pessoa->get_cartao_sus(), PDO::PARAM_STR);
-        $sql->bindParam(":endereco", $pessoa->get_endereco(), PDO::PARAM_STR);
-        $sql->bindParam(":telefone_1", $pessoa->get_telefone_1(), PDO::PARAM_STR);
-        $sql->bindParam(":telefone_2", $pessoa->get_telefone_2(), PDO::PARAM_STR);
+        $sql->bindValue(":cpf", $pessoa->get_cpf(), PDO::PARAM_STR);
+        $sql->bindValue(":nome", $pessoa->get_nome(), PDO::PARAM_STR);
+        $sql->bindValue(":nome_mae", $pessoa->get_nome_mae(), PDO::PARAM_STR);
+        $sql->bindValue(":cartao_sus", $pessoa->get_cartao_sus(), PDO::PARAM_STR);
+        $sql->bindValue(":endereco", $pessoa->get_endereco(), PDO::PARAM_STR);
+        $sql->bindValue(":telefone_1", $pessoa->get_telefone_1(), PDO::PARAM_STR);
+        $sql->bindValue(":telefone_2", $pessoa->get_telefone_2(), PDO::PARAM_STR);
         return $sql;
     }
 }

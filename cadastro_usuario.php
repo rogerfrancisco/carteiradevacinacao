@@ -48,10 +48,12 @@ require_once('components/templates/header.php'); ?>
                         <input type="text" class="form-control" id="telefone_2" placeholder="Digite o seu telefone" name="telefone">
                     </div>
                 </div>
-                <div class="form-check mb-3">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember"> Profissional da Saúde
-                    </label>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Profissional da Saúde
+                        </label>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -70,11 +72,7 @@ require_once('components/templates/header.php'); ?>
 
                 <div class="row">
                     <div class="col-md-8">
-                        <button type="new" class="btn btn-primary">Novo</button>
-                        <button type="search" class="btn btn-primary">Buscar</button>
-                        <button type="edit" class="btn btn-primary">Editar</button>
-                        <button type="delete" class="btn btn-danger">Excluir</button>
-                        <button type="save" id="btn_salvar" class="btn btn-primary">Salvar</button>
+                        <button id="btn_salvar" class="btn btn-success">Salvar</button>
                     </div>
                 </div>    
             </form>
