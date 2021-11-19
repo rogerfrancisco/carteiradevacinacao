@@ -72,11 +72,7 @@ require_once('components/templates/header.php'); ?>
 
                 <div class="row">
                     <div class="col-md-8">
-                        <button type="new" class="btn btn-primary">Novo</button>
-                        <button type="search" class="btn btn-primary">Buscar</button>
-                        <button type="edit" class="btn btn-primary">Editar</button>
-                        <button type="delete" class="btn btn-danger">Excluir</button>
-                        <button type="save" id="btn_salvar" class="btn btn-primary">Salvar</button>
+                        <button id="btn_salvar" class="btn btn-success">Salvar</button>
                     </div>
                 </div>    
             </form>

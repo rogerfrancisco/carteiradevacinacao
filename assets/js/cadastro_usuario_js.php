@@ -1,6 +1,5 @@
 <script>
-    var get = '<?=$_GET['id']?>';
-    console.log(get);
+    var get = '<?=isset($_GET['id']) ? $_GET['id'] : ''?>';
 
     $(document).ready(function() {
         if(get){
@@ -18,7 +17,7 @@
             e.preventDefault();
             $.post('components/core/controllers/pessoa/controller_pessoa.php', {
                 'acao': 'inserir',
-                'objeto': {
+                'objeto': JSON.stringify({
                     'cpf': $("#cpf").val(),
                     'nome': $("#nome").val(),
                     'nome_mae': $("#nome_mae").val(),
@@ -26,7 +25,7 @@
                     'endereco': $("#endereco").val(),
                     'telefone_1': $("#telefone_1").val(),
                     'telefone_2': $("#telefone_2").val()
-                }
+                })
             })
             .done(()=>{
                 window.location.href = "pessoas.php";
