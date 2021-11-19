@@ -16,6 +16,21 @@
 
         $('#btn_salvar').click(function(e){
             e.preventDefault();
+            $.post('components/core/controllers/pessoa/controller_pessoa.php', {
+                'acao': 'inserir',
+                'objeto': {
+                    'cpf': $("#cpf").val(),
+                    'nome': $("#nome").val(),
+                    'nome_mae': $("#nome_mae").val(),
+                    'cartao_sus': $("#cartao_sus").val(),
+                    'endereco': $("#endereco").val(),
+                    'telefone_1': $("#telefone_1").val(),
+                    'telefone_2': $("#telefone_2").val()
+                }
+            })
+            .done(()=>{
+                window.location.href = "pessoas.php";
+            })
         })
 
         carrega_objeto = function(pessoa){

@@ -48,10 +48,12 @@ require_once('components/templates/header.php'); ?>
                         <input type="text" class="form-control" id="telefone_2" placeholder="Digite o seu telefone" name="telefone">
                     </div>
                 </div>
-                <div class="form-check mb-3">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember"> Profissional da Saúde
-                    </label>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Profissional da Saúde
+                        </label>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">

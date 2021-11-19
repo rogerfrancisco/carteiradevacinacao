@@ -8,3 +8,7 @@ header{
     margin: 0 auto !important;
     margin-top: 2%;
 }
+
+input[type='checkbox']{
+    width: 1.7% !important;
+}

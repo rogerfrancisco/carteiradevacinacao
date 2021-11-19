@@ -2,11 +2,10 @@
 
 include_once('../../dao/pessoa/dao_pessoa.php');
 
-$objeto = $_POST['objeto'] ? json_decode($_POST['objeto']) : null;
 $dao_pessoa = new dao_pessoa();
+$objeto = !empty($_POST['objeto']) ? $_POST['objeto'] : null;
+$objeto = json_decode(json_encode($objeto));
 if($objeto){
-
-    $retorno = false;
     if($objeto->cpf && $objeto->nome){
         $pessoa = new pessoa($objeto);
         if(!$dao_pessoa->seleciona_objeto($pessoa->get_cpf())){
@@ -15,6 +14,7 @@ if($objeto){
             $retorno = $dao_pessoa->editar($pessoa);
         }
     }
-
-    echo json_encode($retorno);
 }
+$retorno = false;
+
+echo json_encode($retorno);
