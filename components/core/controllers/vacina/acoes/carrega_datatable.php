@@ -15,7 +15,7 @@ if($vacinas){
             'validade' => $vacina->get_validade(),
             'fabricante' => $vacina->get_fabricante(),
             'dose' => $vacina->get_dose(),
-            'quantidade' => $vacina->quantidade(),
+            'quantidade' => $vacina->get_quantidade(),
             'editar' => '<a href="cadastro_vacina.php?id=' . $vacina->get_id() . '">Editar</a>'
         ));
     }
