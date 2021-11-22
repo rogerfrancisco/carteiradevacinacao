@@ -46,3 +46,8 @@ $.carrega_datatable = function(){
     })
 }
 $.carrega_datatable();
+
+$('#btn_cadastro_usuario').click(function(e){
+    e.preventDefault();
+    $(location).prop('href', 'cadastro_usuario.php');
+})
