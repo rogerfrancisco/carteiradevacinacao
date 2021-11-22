@@ -12,7 +12,7 @@
                 carrega_objeto(JSON.parse(dados));
             })
         }
-
+        
         $('#btn_salvar').click(function(e){
             e.preventDefault();
             $.post('components/core/controllers/pessoa/controller_pessoa.php', {
@@ -32,6 +32,11 @@
             })
         })
 
+        $('#btn_pessoas').click(function(e){
+            e.preventDefault();
+            $(location).prop('href', 'pessoas.php');
+        })
+
         carrega_objeto = function(pessoa){
             $("#nome").val(pessoa.nome);
             $("#nome_mae").val(pessoa.nome_mae);
@@ -41,5 +46,26 @@
             $("#telefone_1").val(pessoa.telefone_1);
             $("#telefone_2").val(pessoa.telefone_2);
         }
+
+        $.mostra_div_profissional=function(){
+            $(".profissional").prop('disabled', false);
+            $("#div_profissional").css("display", "block");
+        }
+
+        $.esconder_div_profissional=function(){
+            $(".profissional").prop('disabled', true);
+            $("#div_profissional").css("display", "none");
+        }
+
+        $("#check_profissional").click(()=>{
+            if ($("#check_profissional").prop(':checked')) {
+                $.mostra_div_profissional();
+            }else{
+                $.esconder_div_profissional();
+            }
+        })
+        
+
     });
+
 </script>

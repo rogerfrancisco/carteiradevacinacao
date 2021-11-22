@@ -1,10 +1,20 @@
 <?php 
 
 require_once('components/templates/header.php'); ?>
-    <div class="row">
+   <link rel="stylesheet" href="assets/css/css_cadastro_pessoa.css">
+   <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h2>Cadastro de Pessoa</h2>
+            <div class="row">    
+                <div class="col-md-10">
+                    <h2>Cadastro de Pessoa</h2>
+                </div>
+                
+                <div class="col-md-2">
+                    <button id="btn_pessoas" class="btn btn-primary">Voltar</button>
+                </div>
+            </div>
+
             <form id="form_Cadastro_Usuario">
                 <div class="row">
                     <div class="col-md-12">
@@ -51,31 +61,30 @@ require_once('components/templates/header.php'); ?>
                 <div class="row">
                     <div class="col-md-12">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="remember"> Profissional da Saúde
+                            <input id="check_profissional" class="form-check-input" type="checkbox" name="profissional"> Profissional da Saúde
                         </label>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <label for="formacao" class="form-label">Formação:</label>
-                        <input type="text" class="form-control" id="formacao" placeholder="Digite a sua formação" name="formacao">
+                <div id="div_profissional">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="formacao" class="form-label">Formação:</label>
+                            <input type="text" class="form-control profissional" disabled id="formacao" placeholder="Digite a sua formação" name="formacao">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="unidade">Unidade</label>
+                            <select id="unidade" disabled class="form-control profissional">
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <label for="unidade" class="form-label">Unidade:</label>
-                        <input type="text" class="form-control" id="unidade" placeholder="Digite a sua unidade" name="unidade">
-                    </div>
-                </div>
-
                 <br>
 
                 <div class="row">
                     <div class="col-md-1">
                         <button id="btn_salvar" class="btn btn-success">Salvar</button>
-                    </div>
-                    <div class="col-md-1">
-                        <button id="btn_pessoas" class="btn btn-warning">Pessoas</button>
                     </div>
                 </div>    
             </form>

@@ -1,95 +1,39 @@
 <?php 
 
 require_once('components/templates/header.php'); ?>
+   
+   <div class="panel panel-default">
+        <div class="panel-heading row">
 
-<div class="table-responsive">
-    <table class="table table-bordered table table-hover">
-        <thead>
-            <tr>
-                <th>DOSES</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>DUPLA ADULTO dT</td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>HEPATITE B</td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>TRÍPLICEE VIRAL</td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>FEBRE AMARELA</td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>INFLUENZA</td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <td>SARS-CoV-2</td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+            <div class="col-md-10">
+                <h3>LISTA DE PESSOAS</h3>
+            </div>
 
+            <div class="col-md-2">
+                <button type="button" id="btn_cadastro_usuario" class="btn btn-primary">Adicionar</button>
+            </div>
+            
+        </div>
+
+
+        <div class="panel-body">
+            <table id="tab_pessoas">
+                <thead>
+                    <tr>
+                        <th>Vacina 1</th>
+                        <th>Vacina 2</th>
+                        <th>Vacina 3</th>
+                        <th>Vacina 4</th>
+                        <th>Vacina 5</th>
+                        <th>Vacina 6</th>
+                        <th>Vacina 7</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+<script src="assets/js/pessoas.js"></script>
 
 <?php require_once('components/templates/footer.php'); ?>

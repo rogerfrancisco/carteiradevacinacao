@@ -4,24 +4,32 @@ require_once('components/templates/header.php'); ?>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h2>Cadastro de Vacina</h2>
-            <form>
+            <div class="row">
+                <div class="col-md-10" >
+                    <h2>Cadastro de Vacina</h2>
+                </div>
+                <div class="col-md-2">
+                    <button id="btn_vacinas" class="btn btn-primary">Voltar</button>
+                </div>
+            </div>
+
+            <form class="form-controll">
                 <div class="row">
                     <div class="col-md-12">
                         <label for="lote" class="form-label">Lote:</label>
-                        <input type="text" class="form-control" id="lote" placeholder="Digite o lote" name="lote">
+                        <input type="text" class="form-control" id="lote" placeholder="Digite o lote" name="lote" onkeypress="$(this).mask('0000000-0');">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="nome_vacina" class="form-label">Nome da vacina:</label>
-                        <input type="text" class="form-control" id="nome_vacina" placeholder="Digite o nome da vacina" name="nome_vacina">
+                        <label for="descricao" class="form-label">Descrição:</label>
+                        <input type="text" class="form-control" id="descricao" placeholder="Digite o nome da vacina" name="descricao">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="validade" class="form-label">Validade:</label>
-                        <input type="text" class="form-control" id="validade" placeholder="Digite a validade da vacina" name="validade">
+                        <input type="text" class="form-control" id="validade" placeholder="Digite a validade da vacina" name="validade" onkeypress="$(this).mask('0000-00-00');">
                     </div>
                 </div>
                 <div class="row">
@@ -46,18 +54,17 @@ require_once('components/templates/header.php'); ?>
                 <br>
                 
                 <div class="row">
-                    <div class="col-md-8">
-                        <button type="new" class="btn btn-primary">Novo</button>
-                        <button type="search" class="btn btn-primary">Buscar</button>
-                        <button type="edit" class="btn btn-primary">Editar</button>
-                        <button type="delete" class="btn btn-danger">Excluir</button>
-                        <button type="save" class="btn btn-primary">Salvar</button>
+                    <div class="col-md-1">
+                        <button id="btn_salvar" class="btn btn-success">Salvar</button>
                     </div>
-                </div>    
+                    
+                </div>   
             </form>
         </div>
         <div class="col-md-2"></div>
     </div>
 
-
-<?php require_once('components/templates/footer.php'); ?>
+<?php
+    require_once('assets/js/cadastro_vacinas_js.php');
+    require_once('components/templates/footer.php'); 
+?>

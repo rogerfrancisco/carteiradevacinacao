@@ -5,34 +5,29 @@ require_once('components/templates/header.php'); ?>
         <div class="panel-heading row">
 
             <div class="col-md-10">
-                <h3>LISTA DE PESSOAS</h3>
+                <h3>LISTA DE UNIDADES DE VACINAÇÃO</h3>
             </div>
 
             <div class="col-md-2">
-                <button type="button" id="btn_cadastro_usuario" class="btn btn-primary">Adicionar</button>
+                <button type="button" id="btn_cadastro_unidade" class="btn btn-primary">Adicionar</button>
             </div>
             
         </div>
 
 
         <div class="panel-body">
-            <table id="tab_pessoas">
+            <table id="tab_unidades">
                 <thead>
                     <tr>
-                        <th>CPF</th>
+                        <th>CNES</th>
                         <th>NOME</th>
-                        <th>NOME MÃE</th>
-                        <th>CARTÃO SUS</th>
                         <th>ENDEREÇO</th>
-                        <th>TELEFONE 1</th>
-                        <th>TELEFONE 2</th>
-                        <th></th>
                     </tr>
                 </thead>
             </table>
         </div>
     </div>
 
-<script src="assets/js/pessoas.js"></script>
+<script src="assets/js/unidades.js"></script>
 
 <?php require_once('components/templates/footer.php'); ?>

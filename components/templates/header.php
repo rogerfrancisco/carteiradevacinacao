@@ -13,6 +13,7 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/css_base.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 
     <!-- DATATABLE -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
@@ -47,7 +48,7 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
                                         <a class="nav-link" href="javascript:void(0)">Profissional</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="cadastro_unidade">Unidade</a>
+                                        <a class="nav-link" href="unidades.php">Unidade</a>
                                     </li>
                                 </ul>
                                 <button class="btn btn-danger" onClick="window.location.href = 'components/core/sessao/deslogar.php'">deslogar</button>

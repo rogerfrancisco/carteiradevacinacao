@@ -5,18 +5,25 @@ require_once('components/templates/header.php'); ?>
 <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h2>Cadastro de Vacina</h2>
+            <div class="row">
+                <div class="col-md-10">
+                    <h2>Cadastro de Pontos de Vacinação</h2>
+                </div>
+                <div class="col-md-2">
+                    <button id="btn_unidades" class="btn btn-primary">Voltar</button>
+                </div>
+            </div>
             <form>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="cnes" class="form-label">CNES:</label>
-                        <input type="text" class="form-control" id="cnes" placeholder="Digite o CNES" name="cnes">
+                        <input type="text" class="form-control" id="cnes" placeholder="Digite o CNES" name="cnes" onkeypress="$(this).mask('0-0000');">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="nome" class="form-label">Nome:</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Digite o Nome" name="nome">
+                        <label for="descricao" class="form-label">Descrição:</label>
+                        <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição" name="descricao">
                     </div>
                 </div>
                 <div class="row">
@@ -29,18 +36,17 @@ require_once('components/templates/header.php'); ?>
                 <br>
 
                 <div class="row">
-                    <div class="col-md-8">
-                        <button type="new" class="btn btn-primary">Novo</button>
-                        <button type="search" class="btn btn-primary">Buscar</button>
-                        <button type="edit" class="btn btn-primary">Editar</button>
-                        <button type="delete" class="btn btn-danger">Excluir</button>
-                        <button type="save" class="btn btn-primary">Salvar</button>
+                    <div class="col-md-1">
+                        <button id="btn_salvar" class="btn btn-success">Salvar</button>
                     </div>
-                </div>    
+                </div>     
             </form>
         </div>
         <div class="col-md-2"></div>
     </div>
 
 
-<?php require_once('components/templates/footer.php'); ?>
+<?php 
+    require_once('assets/js/cadastro_unidades_js.php');
+    require_once('components/templates/footer.php'); 
+?>
