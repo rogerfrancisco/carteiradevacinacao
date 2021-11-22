@@ -21,7 +21,7 @@ require_once('components/templates/header.php'); ?>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="cpf" class="form-label">CPF:</label>
-                        <input type="text" class="form-control" id="cpf" placeholder="Digite o seu CPF" name="cpf">
+                        <input type="text" class="form-control" id="cpf" placeholder="Digite o seu CPF" name="cpf" onkeypress="$(this).mask('000.000.000-00');">
                     </div>
                 </div>
                 <div class="row">
@@ -38,14 +38,14 @@ require_once('components/templates/header.php'); ?>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="telefone_1" class="form-label">Telefone 1:</label>
-                        <input type="text" class="form-control" id="telefone_1" placeholder="Digite o seu telefone" name="telefone">
+                        <label for="telefone_1" class="form-label">Telefone fixo:</label>
+                        <input type="text" class="form-control" id="telefone_1" placeholder="Digite o seu telefone" name="telefone" onkeypress="$(this).mask('(00) 0000-0000');">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="telefone_2" class="form-label">Telefone 2:</label>
-                        <input type="text" class="form-control" id="telefone_2" placeholder="Digite o seu telefone" name="telefone">
+                        <label for="telefone_2" class="form-label">Telefone Celular:</label>
+                        <input type="text" class="form-control" id="telefone_2" placeholder="Digite o seu telefone" name="telefone" onkeypress="$(this).mask('(00) 00000-0000');">
                     </div>
                 </div>
                 <div class="row">
@@ -71,8 +71,11 @@ require_once('components/templates/header.php'); ?>
                 <br>
 
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-1">
                         <button id="btn_salvar" class="btn btn-success">Salvar</button>
+                    </div>
+                    <div class="col-md-1">
+                        <button id="btn_pessoas" class="btn btn-warning">Pessoas</button>
                     </div>
                 </div>    
             </form>
@@ -81,5 +84,7 @@ require_once('components/templates/header.php'); ?>
     </div>
 
 
-<?php require_once('assets/js/cadastro_usuario_js.php');
-require_once('components/templates/footer.php'); ?>
+<?php 
+    require_once('assets/js/cadastro_usuario_js.php');
+    require_once('components/templates/footer.php');
+?>

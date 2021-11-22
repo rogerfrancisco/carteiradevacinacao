@@ -9,7 +9,7 @@ require_once('components/templates/header.php'); ?>
             </div>
 
             <div class="col-md-2">
-                <button type="button" id="btn_cadastro_usuario" class="btn btn-primary">Cadastro Usuário</button>
+                <button type="button" id="btn_cadastro_usuario" class="btn btn-warning">Cadastro Usuário</button>
             </div>
             
         </div>

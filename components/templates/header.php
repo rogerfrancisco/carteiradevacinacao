@@ -18,7 +18,7 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
     <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/js/dataTables.jqueryui.min.js">
     <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
@@ -30,31 +30,27 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="javascript:void(0)">Home</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="mynavbar">
                                 <ul class="navbar-nav me-auto">
-                                    
                                     <li class="nav-item">
-                                        <a class="nav-link" href="javascript:void(0)">Meu Perfil</a>
+                                        <a class="nav-link" href="home.php">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="pessoas.php">Usuários</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="javascript:void(0)">Paciente</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="javascript:void(0)">Vacina</a>
+                                        <a class="nav-link" href="vacinas.php">Vacinas</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link" href="javascript:void(0)">Profissional</a>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="javascript:void(0)">Unidade</a>
+                                        <a class="nav-link" href="cadastro_unidade">Unidade</a>
                                     </li>
                                 </ul>
-                                <button onClick="window.location.href = 'components/core/sessao/deslogar.php'">deslogar</button>
+                                <button class="btn btn-danger" onClick="window.location.href = 'components/core/sessao/deslogar.php'">deslogar</button>
                             </div>
                         </div>
                     </nav>                   
