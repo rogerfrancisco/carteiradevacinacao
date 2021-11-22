@@ -67,9 +67,9 @@ class dao_unidade{
     }
 
     private function bind_all($sql, $unidade){
-        $sql->bindParam(":cnes", $unidade->get_cnes(), PDO::PARAM_STR);
-        $sql->bindParam(":descricao", $unidade->get_descricao(), PDO::PARAM_STR);
-        $sql->bindParam(":endereco", $unidade->get_endereco(), PDO::PARAM_STR);
+        $sql->bindValue(":cnes", $unidade->get_cnes(), PDO::PARAM_STR);
+        $sql->bindValue(":descricao", $unidade->get_descricao(), PDO::PARAM_STR);
+        $sql->bindValue(":endereco", $unidade->get_endereco(), PDO::PARAM_STR);
         return $sql;
     }
 }

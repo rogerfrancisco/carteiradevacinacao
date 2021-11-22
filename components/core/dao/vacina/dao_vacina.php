@@ -79,14 +79,14 @@ class dao_vacina{
 
     private function bind_all($sql, $vacina){
         if($vacina->get_id() != null){
-            $sql->bindParam(":id", $vacina->get_id(), PDO::PARAM_INT);
+            $sql->bindValue(":id", $vacina->get_id(), PDO::PARAM_INT);
         }
-        $sql->bindParam(":lote", $vacina->get_lote(), PDO::PARAM_STR);
-        $sql->bindParam(":descricao", $vacina->get_descricao(), PDO::PARAM_STR);
-        $sql->bindParam(":validade", $vacina->get_validade(), PDO::PARAM_STR);
-        $sql->bindParam(":fabricante", $vacina->get_fabricante(), PDO::PARAM_STR);
-        $sql->bindParam(":dose", $vacina->get_dose(), PDO::PARAM_STR);
-        $sql->bindParam(":quantidade", $vacina->get_quantidade(), PDO::PARAM_INT);
+        $sql->bindValue(":lote", $vacina->get_lote(), PDO::PARAM_STR);
+        $sql->bindValue(":descricao", $vacina->get_descricao(), PDO::PARAM_STR);
+        $sql->bindValue(":validade", $vacina->get_validade(), PDO::PARAM_STR);
+        $sql->bindValue(":fabricante", $vacina->get_fabricante(), PDO::PARAM_STR);
+        $sql->bindValue(":dose", $vacina->get_dose(), PDO::PARAM_STR);
+        $sql->bindValue(":quantidade", $vacina->get_quantidade(), PDO::PARAM_INT);
 
         return $sql;
     }

@@ -70,9 +70,9 @@ class dao_profissional_saude{
         if($profissional_saude->get_id() != null){
             $sql->bindParam(":id", $profissional_saude->get_id(), PDO::PARAM_INT);
         }
-        $sql->bindParam(":formacao", $profissional_saude->get_formacao(), PDO::PARAM_STR);
-        $sql->bindParam(":fk_pessoa", $profissional_saude->get_fk_pessoa(), PDO::PARAM_STR);
-        $sql->bindParam(":fk_unidade", $profissional_saude->get_fk_unidade(), PDO::PARAM_STR);
+        $sql->bindValue(":formacao", $profissional_saude->get_formacao(), PDO::PARAM_STR);
+        $sql->bindValue(":fk_pessoa", $profissional_saude->get_fk_pessoa(), PDO::PARAM_STR);
+        $sql->bindValue(":fk_unidade", $profissional_saude->get_fk_unidade(), PDO::PARAM_STR);
 
         return $sql;
     }
