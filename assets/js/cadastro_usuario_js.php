@@ -58,7 +58,8 @@
         }
 
         $("#check_profissional").click(()=>{
-            if ($("#check_profissional").prop(':checked')) {
+            console.log("entrou aqui");
+            if ($("#check_profissional").prop('checked')) {
                 $.mostra_div_profissional();
             }else{
                 $.esconder_div_profissional();
