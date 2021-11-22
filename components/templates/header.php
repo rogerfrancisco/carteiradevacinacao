@@ -1,4 +1,6 @@
-<?php include __DIR__ . '/../core/sessao/validar_sessao.php'?>
+<?php include __DIR__ . '/../core/sessao/validar_sessao.php';
+require_once('components/core/apoio/valida_permissao.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
