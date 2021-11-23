@@ -11,25 +11,34 @@
                 console.log(JSON.parse(dados));
                 carrega_objeto(JSON.parse(dados));
             })
-        }     
+        } 
         
+        $(function(){
+            $("#form_validate").validate();
+        });
+                
         $('#btn_salvar').click(function(e){
             e.preventDefault();
-            $.post('components/core/controllers/vacina/controller_vacina.php', {
-                'acao': 'inserir',
-                'objeto': JSON.stringify({
-                    'lote': $("#lote").val(),
-                    'descricao': $("#descricao").val(),
-                    'validade': $("#validade").val(),
-                    'fabricante': $("#fabricante").val(),
-                    'dose': $("#dose").val(),
-                    'quantidade': $("#quantidade").val()
+            if ( $("#form_validate").validate()) {
+                
+                $.post('components/core/controllers/vacina/controller_vacina.php', {
+                    'acao': 'inserir',
+                    'objeto': JSON.stringify({
+                        'lote': $("#lote").val(),
+                        'descricao': $("#descricao").val(),
+                        'validade': $("#validade").val(),
+                        'fabricante': $("#fabricante").val(),
+                        'dose': $("#dose").val(),
+                        'quantidade': $("#quantidade").val()
+                    })
                 })
-            })
-            .done(()=>{
-                window.location.href = "vacinas.php";
-            })
+                .done(()=>{
+                    window.location.href = "vacinas.php";
+                })
+            }
         })
+
+
 
         $('#btn_vacinas').click(function(e){
             e.preventDefault();
@@ -65,7 +74,7 @@
     });
 
     
-  
+
 
 </script>
 

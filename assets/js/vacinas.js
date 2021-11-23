@@ -40,9 +40,7 @@ $.carrega_datatable = function(){
 }
 $.carrega_datatable();
 
-$('#btn_cadastro_vacina').click(function(e){
-    e.preventDefault();
-    $(location).prop('href', 'cadastro_vacina.php');
-})        
-
-   
+    $('#btn_cadastro_vacina').click(function(e){
+        e.preventDefault();
+        $(location).prop('href', 'cadastro_vacina.php');
+    })  

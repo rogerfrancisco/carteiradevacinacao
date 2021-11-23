@@ -17,7 +17,7 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-    
+
 
     <!-- DATATABLE -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
@@ -43,7 +43,7 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
                                         <a class="nav-link" href="pessoas.php">Usuários</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="javascript:void(0)">Paciente</a>
+                                        <a class="nav-link" href="pacientes.php">Paciente</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="vacinas.php">Vacinas</a>

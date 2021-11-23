@@ -14,56 +14,64 @@ require_once('components/templates/header.php'); ?>
                 </div>
             </div>
 
-            <form class="form-controll">
-                <div class="row">
+            <form id="form_validate">
+                                
+                <div class=" form-group row">
                     <div class="col-md-12">
                         <label for="lote" class="form-label">Lote:</label>
-                        <input type="text"  class="form-control" id="lote" placeholder="Digite o lote" name="lote"  onkeypress="$(this).mask('0000000-0');">
+                        <input type="text"  name="lote" id="lote"  placeholder="Digite o lote" class="form-control" required minlength="8" onkeypress="$(this).mask('0000000-0');">
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-12">
                         <label for="descricao" class="form-label">Descrição:</label>
-                        <input type="text" class="form-control" id="descricao" placeholder="Digite o nome da vacina" name="descricao">
+                        <input type="text" name="descricao" id="descricao" placeholder="Digite o nome da vacina" required class="form-control"> 
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-12">
                         <label for="validade" class="form-label">Validade:</label>
-                        <input id="validade" name="validade" type="text">
+                        <input type="text" name="validade" id="validade" required>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-12">
                         <label for="fabricante" class="form-label">Fabricante:</label>
-                        <input type="text" class="form-control" id="fabricante" placeholder="Digite o fabricante" name="fabricante">
+                        <input type="text" name="fabricante" id="fabricante" placeholder="Digite o fabricante" class="form-control" required >
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-12">
                         <label for="dose" class="form-label">Dose:</label>
-                        <input type="number" max="4" class="form-control" id="dose" placeholder="Digite a dose" name="dose">
+                        <input type="number" max="5" name="dose" id="dose" placeholder="Digite a dose" class="form-control" required>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-12">
                         <label for="quantidade" class="form-label">Quantidade:</label>
-                        <input type="number" class="form-control" id="quantidade" placeholder="Digite a quantidade" name="quantidade">
+                        <input type="number" name="quantidade" id="quantidade" placeholder="Digite a quantidade" class="form-control" required>
                     </div>
                 </div>
-                
-                <br>
-                
-                <div class="row">
-                    <div class="col-md-1">
-                        <button id="btn_salvar" class="btn btn-success">Salvar</button>
-                    </div>
                     
-                </div>   
+                    <br>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <button type="submit" id="btn_salvar" class="btn btn-success">Salvar</button>
+                        </div>
+                        
+                    </div>   
             </form>
         </div>
         <div class="col-md-2"></div>
     </div>
+
+
 
 <?php
     require_once('assets/js/cadastro_vacinas_js.php');
