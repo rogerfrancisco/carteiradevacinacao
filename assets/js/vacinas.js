@@ -44,3 +44,5 @@ $('#btn_cadastro_vacina').click(function(e){
     e.preventDefault();
     $(location).prop('href', 'cadastro_vacina.php');
 })        
+
+   

@@ -18,7 +18,7 @@ require_once('components/templates/header.php'); ?>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="lote" class="form-label">Lote:</label>
-                        <input type="text" class="form-control" id="lote" placeholder="Digite o lote" name="lote" onkeypress="$(this).mask('0000000-0');">
+                        <input type="text"  class="form-control" id="lote" placeholder="Digite o lote" name="lote"  onkeypress="$(this).mask('0000000-0');">
                     </div>
                 </div>
                 <div class="row">
@@ -42,13 +42,13 @@ require_once('components/templates/header.php'); ?>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="dose" class="form-label">Dose:</label>
-                        <input type="text" class="form-control" id="dose" placeholder="Digite a dose" name="dose">
+                        <input type="number" max="4" class="form-control" id="dose" placeholder="Digite a dose" name="dose">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="quantidade" class="form-label">Quantidade:</label>
-                        <input type="text" class="form-control" id="quantidade" placeholder="Digite a quantidade" name="quantidade">
+                        <input type="number" class="form-control" id="quantidade" placeholder="Digite a quantidade" name="quantidade">
                     </div>
                 </div>
                 

@@ -49,7 +49,7 @@
 
     $(function() {
         $( "#validade" ).datepicker({
-            dateFormat: 'yy-mm-dd',
+            dateFormat: 'dd/mm/yy',
             closeText:"Fechar",
             prevText:"&#x3C;Anterior",
             nextText:"Próximo&#x3E;",
@@ -63,6 +63,8 @@
             firstDay:1
         });
     });
+
+    
   
 
 </script>
