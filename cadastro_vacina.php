@@ -1,6 +1,7 @@
 <?php 
 
 require_once('components/templates/header.php'); ?>
+    <link rel="stylesheet" href="assets/css/css_cadastro_vacinas.css">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
@@ -29,7 +30,7 @@ require_once('components/templates/header.php'); ?>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="validade" class="form-label">Validade:</label>
-                        <input type="text" class="form-control" id="validade" placeholder="Digite a validade da vacina" name="validade" onkeypress="$(this).mask('0000-00-00');">
+                        <input id="validade" name="validade" type="text">
                     </div>
                 </div>
                 <div class="row">
