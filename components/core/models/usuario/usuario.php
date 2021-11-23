@@ -5,7 +5,7 @@ class usuario{
     private $senha;
     private $permissao;
 
-    public function __construct($json)
+    public function construtor($json)
     {
         $this->id = $json->id;
         $this->user = $json->user;

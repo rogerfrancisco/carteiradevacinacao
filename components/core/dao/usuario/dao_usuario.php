@@ -15,7 +15,9 @@ class dao_usuario{
         $retorno = array();
         if($sql){
             foreach($sql as $temp){
-                array_push($retorno, new usuario($temp));
+                $usuario = new usuario();
+                $usuario->construtor($temp);
+                array_push($retorno, $usuario);
             }
             return $retorno;
         }else{
@@ -30,7 +32,12 @@ class dao_usuario{
         $sql->execute();
         $sql = $sql->fetch();
 
-        return $sql ? new usuario($sql) : false;
+        $retorno = false;
+        if($sql){
+            $retorno = new usuario();
+            $retorno->construtor($sql);
+        }
+        return $retorno;
     }
 
     public function inserir($usuario){
@@ -71,7 +78,25 @@ class dao_usuario{
         $sql = $sql->fetch();
 
         if($sql){
-            return new usuario($sql);
+            $usuario = new usuario();
+            $usuario->construtor($sql);
+            return $usuario;
+        }else{
+            false;
+        }
+    }
+
+    public function seleciona_objeto_por_user($user){
+        $sql = "SELECT * FROM $this->tabela WHERE user = :user";
+        $sql = conecta::prepare($sql);
+        $sql->bindParam(":user", $user, PDO::PARAM_STR);
+        $sql->execute();
+        $sql = $sql->fetch();
+
+        if($sql){
+            $usuario = new usuario();
+            $usuario->construtor($sql);
+            return $usuario;
         }else{
             false;
         }
