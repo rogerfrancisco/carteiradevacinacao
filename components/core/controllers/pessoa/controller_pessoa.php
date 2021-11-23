@@ -7,48 +7,25 @@
         apoio::conecta_token($token);
         switch($acao){
             case "inserir":
-                controller_pessoa::inserir();
+                require_once("acoes/inserir.php");
                 break;
     
             case "selecionar_todos":
-                controller_pessoa::selecionar_todos();
+                require_once("acoes/selecionar_todos.php");
                 break;
     
             case "selecionar_objeto":
-                controller_pessoa::selecionar_objeto();
+                require_once("acoes/selecionar_objeto.php");
                 break;
     
             case "deletar":
-                controller_pessoa::deletar();
+                require_once("acoes/deletar.php");
                 break;
 
             case "carrega_datatable":
-                controller_pessoa::carrega_datatable();
+                require_once("acoes/carrega_datatable.php");
                 break;
         }
     }else{
         echo("token inexistente!");
     }
-
-
-class controller_pessoa{
-    public static function inserir(){
-        require_once("acoes/inserir.php");
-    }
-
-    public static function selecionar_todos(){
-        require_once("acoes/selecionar_todos.php");
-    }
-
-    public static function selecionar_objeto(){
-        require_once("acoes/selecionar_objeto.php");
-    }
-
-    public static function deletar(){
-        require_once("acoes/deletar.php");
-    }
-
-    public static function carrega_datatable(){
-        require_once("acoes/carrega_datatable.php");
-    }
-}

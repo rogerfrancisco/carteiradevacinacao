@@ -3,7 +3,8 @@
 include_once('../../dao/pessoa/dao_pessoa.php');
 $dao_pessoa = new dao_pessoa();
 
-$pessoas = $dao_pessoa->seleciona_todos();
+$filtro = !empty($_POST['filtro']) ? $_POST['filtro'] : null;
+$pessoas = $filtro == "P" ? $dao_pessoa->seleciona_todos_com_profissional() : $dao_pessoa->seleciona_todos();
 
 $retorno['data'] = array();
 if($pessoas){

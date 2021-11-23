@@ -24,7 +24,10 @@
                     'cartao_sus': $("#cartao_sus").val(),
                     'endereco': $("#endereco").val(),
                     'telefone_1': $("#telefone_1").val(),
-                    'telefone_2': $("#telefone_2").val()
+                    'telefone_2': $("#telefone_2").val(),
+                    'profissional': $("#check_profissional").prop('checked') ? "S": 'N',
+                    'formacao': $("#formacao").val(),
+                    'unidade': $("#unidade").val()
                 })
             })
             .done(()=>{
@@ -50,6 +53,7 @@
         $.mostra_div_profissional=function(){
             $(".profissional").prop('disabled', false);
             $("#div_profissional").css("display", "block");
+            $.carrega_selected_unidade();
         }
 
         $.esconder_div_profissional=function(){
@@ -58,13 +62,33 @@
         }
 
         $("#check_profissional").click(()=>{
-            console.log("entrou aqui");
             if ($("#check_profissional").prop('checked')) {
                 $.mostra_div_profissional();
             }else{
                 $.esconder_div_profissional();
             }
         })
+
+        $.carrega_selected_unidade = (unidade)=>{
+            $("#unidade").empty();
+
+            $.post('components/core/controllers/unidade/controller_unidade.php', {
+                'acao': 'selecionar_todos'
+            }).done((retorno)=>{
+                $.each(JSON.parse(retorno), function(key, value){
+                    $("#unidade").append($('<option>', {
+                        text: value.descricao,
+                        value: value.cnes
+                    }))
+
+                    if(value.cnes == unidade){
+                        $("unidade option[value='" + unidade + "']").prop({
+                            selected: "selected"
+                        })
+                    }
+                })
+            })
+        }
         
 
     });

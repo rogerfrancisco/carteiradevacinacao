@@ -15,7 +15,9 @@ class dao_profissional_saude{
         $retorno = array();
         if($sql){
             foreach($sql as $temp){
-                array_push($retorno, new profissional_saude($temp));
+                $profissional = new profissional_saude();
+                $profissional->construtor($temp);
+                array_push($retorno, $profissional);
             }
             return $retorno;
         }else{
@@ -30,7 +32,29 @@ class dao_profissional_saude{
         $sql->execute();
 
         $sql = $sql->fetch();
-        return $sql ? new profissional_saude($sql) : false;
+        $retorno = false;
+        if($sql){
+            $retorno = new profissional_saude();
+            $retorno->construtor($sql);
+        }
+        return $retorno;
+    }
+
+    public function seleciona_objeto_por_pessoa($cpf){
+        $sql = "SELECT a.* FROM $this->tabela a
+                INNER JOIN pessoa b ON a.fk_pessoa = b.cpf
+                WHERE b.cpf = :cpf";
+        $sql = conecta::prepare($sql);
+        $sql->bindParam(":cpf", $cpf);
+        $sql->execute();
+        
+        $sql = $sql->fetch();
+        $retorno = false;
+        if($sql){
+            $retorno = new profissional_saude();
+            $retorno->construtor($sql);
+        }
+        return $retorno;
     }
 
     public function deletar($id){

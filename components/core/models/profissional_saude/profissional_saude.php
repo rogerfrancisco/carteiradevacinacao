@@ -5,7 +5,7 @@ class profissional_saude{
     private $fk_pessoa;
     private $fk_unidade;
 
-    function __construct($json){
+    function construtor($json){
         $this->id = $json->id;
         $this->formacao = $json->formacao;
         $this->fk_pessoa = $json->fk_pessoa;

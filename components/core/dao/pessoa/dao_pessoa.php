@@ -86,6 +86,25 @@ class dao_pessoa{
         return $sql->execute();
     }
 
+    public function seleciona_todos_com_profissional(){
+        $sql = "SELECT 
+                    a.cpf AS cpf,
+                    a.nome AS nome,
+                    a.nome_mae AS nome_mae,
+                    a.cartao_sus AS cartao_sus,
+                    a.endereco AS endereco,
+                    a.telefone_1 AS telefone_1,
+                    a.telefone_2 AS telefone_2,
+                    b.formacao AS formacao,
+                    c.descricao AS unidade
+                FROM $this->tabela a
+                INNER JOIN profissional_saude b ON a.cpf = b.fk_pessoa
+                INNER JOIN unidade c ON c.cnes = b.fk_unidade";
+        $sql = conecta::prepare($sql);
+        $sql->execute();
+        return $sql->fetchAll();
+    }
+
     private function bind_all($sql, $pessoa){
         $sql->bindValue(":cpf", $pessoa->get_cpf(), PDO::PARAM_STR);
         $sql->bindValue(":nome", $pessoa->get_nome(), PDO::PARAM_STR);
