@@ -25,6 +25,10 @@
             case "carrega_datatable":
                 require_once("acoes/carrega_datatable.php");
                 break;
+
+            case "valida_cpf":
+                require_once("acoes/valida_cpf.php");
+                break;
         }
     }else{
         echo("token inexistente!");
