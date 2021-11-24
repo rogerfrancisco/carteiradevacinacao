@@ -12,7 +12,7 @@
         apoio::session_start();
         $_SESSION['id_usuario'] = $dados->get_id();
         $_SESSION['permissao'] = $dados->get_permissao();
-        $_SESSION['user'] = $dados->get_user();
+        $_SESSION['usuario'] = $dados->get_user();
         echo true;
     }else{
         echo false;
