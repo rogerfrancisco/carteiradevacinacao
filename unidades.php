@@ -22,6 +22,7 @@ require_once('components/templates/header.php'); ?>
                         <th>CNES</th>
                         <th>NOME</th>
                         <th>ENDEREÇO</th>
+                        <th></th>
                     </tr>
                 </thead>
             </table>
