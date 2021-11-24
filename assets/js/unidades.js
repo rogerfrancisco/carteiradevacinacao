@@ -22,6 +22,9 @@ $.carrega_datatable = function(){
             },
             {
                 "data": 'endereco'
+            },
+            {
+                "data": 'editar'
             }
         ],
         "language": {
