@@ -1,11 +1,11 @@
 <?php
 
-include_once('../../dao/dao_pessoa_nn_vacina_nn_vacina');
+include_once('../../dao/dao_pessoa_nn_vacina.php');
 include_once('../../apoio/apoio.php');
 $dao_pessoa_nn_vacina = new dao_pessoa_nn_vacina();
 
 apoio::session_start();
-$cpf = $_SESSION['id_usuario'];
+$cpf = $_SESSION['user'];
 $vacinas = $dao_pessoa_nn_vacina->selecionar_por_pessoa($cpf);
 
 $retorno['data'] = array();

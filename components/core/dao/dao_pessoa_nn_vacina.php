@@ -1,7 +1,7 @@
 <?php
 
-include_once("../db/conecta.php");
-require_once("../models/pessoa_nn_vacina.php");
+include_once("../../db/conecta.php");
+require_once("../../models/pessoa_nn_vacina.php");
 
 class dao_pessoa_nn_vacina{
     public $tabela = "pessoa_nn_vacina";

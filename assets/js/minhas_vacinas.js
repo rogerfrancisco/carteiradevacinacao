@@ -15,7 +15,7 @@ $.carrega_datatable = function(){
             }
         },
         columns: [{
-                "data": 'descrica'
+                "data": 'descricao'
             },
             {
                 "data": 'dose_1'

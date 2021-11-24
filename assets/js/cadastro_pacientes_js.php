@@ -17,7 +17,7 @@
         
         $('#btn_salvar').click(function(e){
             e.preventDefault();
-            if(valida_formulario(campos) && valida){
+            if(validar_formulario(campos) && valida){
                 $.post('components/core/controllers/pessoa_nn_vacina/controller_pessoa_nn_vacina.php', {
                     'acao': 'inserir',
                     'objeto': JSON.stringify({
@@ -28,6 +28,7 @@
                     })
                 })
                 .done(()=>{
+                    alert("Paciente Vacinado com Sucesso!");
                     $("#cpf").val('');
                     $("#dose").val('');
                 })

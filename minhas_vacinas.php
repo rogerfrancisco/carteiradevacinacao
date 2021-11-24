@@ -32,6 +32,6 @@ require_once('components/templates/header.php'); ?>
         </div>
     </div>
 
-<script src="assets/js/pessoas.js"></script>
+<script src="assets/js/minhas_vacinas.js"></script>
 
 <?php require_once('components/templates/footer.php'); ?>
