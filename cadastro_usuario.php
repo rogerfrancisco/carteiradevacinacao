@@ -61,7 +61,7 @@ require_once('components/templates/header.php'); ?>
                 <div class="row">
                     <div class="col-md-12" id="div_check_professional">
                         <label class="form-check-label">
-                            <input id="check_profissional" class="form-check-input" type="checkbox" name="profissional"> Profissional da Saúde
+                            <input id="check_profissional" class="form-check-input" type="checkbox" name="profissional" > Profissional da Saúde
                         </label>
                     </div>
                 </div>
