@@ -52,6 +52,13 @@
             $("#endereco").val(pessoa.endereco);
             $("#telefone_1").val(pessoa.telefone_1);
             $("#telefone_2").val(pessoa.telefone_2);
+            if(pessoa.formacao){
+                $("#check_profissional").prop("checked", true);
+                $("#formacao").val(pessoa.formacao);
+                $.carrega_selected_unidade(pessoa.unidade);
+                $.mostra_div_profissional();
+
+            }
         }
 
         $.mostra_div_profissional=function(){
