@@ -37,22 +37,22 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
                         <div class="container-fluid">
                                 <ul class="navbar-nav me-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="home.php">Home</a>
+                                        <a class="nav-link btn btn-primary" href="home.php"> Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="pessoas.php">Usuários</a>
+                                        <a class="nav-link btn btn-primary" href="pessoas.php">Usuários</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="pacientes.php">Paciente</a>
+                                        <a class="nav-link btn btn-primary" href="pacientes.php">Paciente</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="vacinas.php">Vacinas</a>
+                                        <a class="nav-link btn btn-primary" href="vacinas.php">Vacinas</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                         <a class="nav-link" href="javascript:void(0)">Profissional</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="unidades.php">Unidade</a>
+                                        <a class="nav-link btn btn-primary" href="unidades.php">Unidade</a>
                                     </li>
                                 </ul>
                                 <button class="btn btn-danger" onClick="window.location.href = 'components/core/sessao/deslogar.php'">deslogar</button>

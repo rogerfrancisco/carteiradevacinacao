@@ -1,4 +1,4 @@
-$carrega_datatable = function(){
+$.carrega_datatable = function(){
     $("#tab_minhas_vacinas").DataTable({
         "pageLength": 10,
         ordering: true,
@@ -39,4 +39,4 @@ $carrega_datatable = function(){
         
     })
 }
-$carrega_datatable();
+$.carrega_datatable();
