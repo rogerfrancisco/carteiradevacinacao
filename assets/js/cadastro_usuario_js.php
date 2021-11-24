@@ -1,6 +1,6 @@
 <script>
     var get = '<?=isset($_GET['id']) ? $_GET['id'] : ''?>';
-    var campos = ['nome', 'nome_mae', 'cartao_sus', 'endereco', 'cpf', 'telefone_1', 'telefone_2']
+    var campos = ['nome', 'nome_mae', 'cartao_sus', 'endereco', 'cpf', 'telefone_1']
 
     $(document).ready(function() {
         if(get){
