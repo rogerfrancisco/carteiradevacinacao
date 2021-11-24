@@ -21,13 +21,20 @@ require_once('components/templates/header.php'); ?>
                 <div class="row">
                     <div class="col-md-12" id="div_vacina">
                         <label for="descricao" class="form-label">Vacina:</label>
-                        <select name="fk_vacina" id="vacina" class="form-control"></select>
+                        <select name="vacina" id="vacina" class="form-control"></select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12" id="div_dose">
                         <label for="dose" class="form-label">Dose:</label>
                         <input type="number" class="form-control" id="dose" placeholder="Dose Aplicada" name="dose" max="5">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" id="">
+                        <label for="unidade">Unidade</label>
+                        <select name="unidade" id="unidade" class="form-control"></select>
                     </div>
                 </div>
                  

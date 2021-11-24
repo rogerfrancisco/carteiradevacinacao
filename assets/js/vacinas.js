@@ -31,6 +31,9 @@ $.carrega_datatable = function(){
             },
             {
                 "data": 'quantidade'
+            },
+            {
+                "data": 'editar'
             }
         ],
         "language": {

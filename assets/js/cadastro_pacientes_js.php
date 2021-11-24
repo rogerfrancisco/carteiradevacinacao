@@ -67,6 +67,29 @@
         }
         $.carrega_selected_vacina('');
 
+        $.carrega_selected_unidade = (unidade)=>{
+            $("#unidade").empty();
+
+            $.post('components/core/controllers/unidade/controller_unidade.php', {
+                'acao': 'selecionar_todos'
+            }).done((retorno)=>{
+                $.each(JSON.parse(retorno), function(key, value){
+                    $("#unidade").append($('<option>', {
+                        text: value.descricao,
+                        value: value.id
+                    }))
+
+                    if(value.id == unidade){
+                        $("unidade option[value='" + unidade + "']").prop({
+                            selected: "selected"
+                        })
+                    }
+                })
+            })
+        }
+        $.carrega_selected_unidade('');
+
+        
         $("#cpf").focusout(()=>{
             $.post('components/core/controllers/pessoa/controller_pessoa.php',{
                 'acao': 'valida_cpf',

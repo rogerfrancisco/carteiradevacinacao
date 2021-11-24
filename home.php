@@ -2,7 +2,7 @@
 
 require_once('components/templates/header.php'); ?>
    
-    <main class="container">
+    <main class="container-fluid">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -40,21 +40,37 @@ require_once('components/templates/header.php'); ?>
             </button>
         </div>
         
-        <div class="row">
-            <div class="col-md-4">
-                <img src="assets/img/hospital.png" alt="">
-            </div>
+        
     
-            <div class="col-md-4">
-                <img src="assets/img/parque.png" alt="">
-            </div>
-
-            <div class="col-md-4">
-                <img src="assets/img/postotorres.png" alt="">
-            </div>
-    
-        </div>
+        
     </main>
 
+    <div class="container">
+        <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/img/hospital.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, 
+                        nulla reiciendis. Ea at, sed, ab repellat culpa nihil excepturi 
+                        molestias tempora error facere optio eaque. Magni nesciunt veritatis 
+                        repudiandae numquam.</p>
+                </div>
+        
+                <div class="col-md-4">
+                    <img src="assets/img/parque.png" alt="s">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, 
+                        nulla reiciendis. Ea at, sed, ab repellat culpa nihil excepturi 
+                        molestias tempora error facere optio eaque. Magni nesciunt veritatis 
+                        repudiandae numquam.</p>
+                </div>
+    
+                <div class="col-md-4">
+                    <img src="assets/img/postotorres.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, 
+                        nulla reiciendis. Ea at, sed, ab repellat culpa nihil excepturi 
+                        molestias tempora error facere optio eaque. Magni nesciunt veritatis 
+                        repudiandae numquam.</p>
+                </div>
+        </div>
+    </div>
 
 <?php require_once('components/templates/footer.php'); ?>
