@@ -88,6 +88,8 @@
             })
         }
         $.carrega_selected_unidade('');
+
+        
         $("#cpf").focusout(()=>{
             $.post('components/core/controllers/pessoa/controller_pessoa.php',{
                 'acao': 'valida_cpf',
