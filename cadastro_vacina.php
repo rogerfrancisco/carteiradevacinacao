@@ -15,7 +15,7 @@ require_once('components/templates/header.php'); ?>
             </div>
 
             <form id="form_validate">
-                                
+                <input type="hidden" id="id">
                 <div class=" form-group row">
                     <div class="col-md-12" id="div_lote">
                         <label for="lote" class="form-label">Lote:</label>

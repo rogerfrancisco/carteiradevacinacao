@@ -22,6 +22,7 @@
                 $.post('components/core/controllers/vacina/controller_vacina.php', {
                     'acao': 'inserir',
                     'objeto': JSON.stringify({
+                        'id': $("#id").val(),
                         'lote': $("#lote").val(),
                         'descricao': $("#descricao").val(),
                         'validade': $("#validade").val(),
@@ -42,6 +43,7 @@
         })
 
         carrega_objeto = function(vacina){
+            $("#id").val(vacina.id);
             $("#lote").val(vacina.lote);
             $("#descricao").val(vacina.descricao);
             var data = vacina.validade.split('-');
