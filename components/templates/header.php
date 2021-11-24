@@ -40,20 +40,12 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
                                     <a class="nav-link" href="home.php"> Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pessoas.php">Pessoas</a>
+                                    <a class="nav-link" href="minhas_vacinas.php">Minhas Vacinas</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pacientes.php">Paciente</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="vacinas.php">Vacinas</a>
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="javascript:void(0)">Profissional</a>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="unidades.php">Unidade</a>
-                                </li>
+                                <?php if($_SESSION['permissao']){
+                                    include __DIR__ . '/../templates/botoes_com_restricao.php';
+                                }
+                                ?>
                             </ul>
                             <button class="btn btn-danger" onClick="window.location.href = 'components/core/sessao/deslogar.php'">deslogar</button>
                         
