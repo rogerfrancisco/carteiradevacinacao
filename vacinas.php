@@ -25,6 +25,7 @@ require_once('components/templates/header.php'); ?>
                         <th>Fabricante</th>
                         <th>Dose</th>
                         <th>Quantidade</th>
+                        <th></th>
                     </tr>
                 </thead>
             </table>
