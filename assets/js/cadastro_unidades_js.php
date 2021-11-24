@@ -6,7 +6,7 @@
         if(get){
             $.post('components/core/controllers/unidade/controller_unidade.php',{
                 'acao': 'selecionar_objeto',
-                'cpf': get
+                'cnes': get
             })
             .done((dados)=>{
                 console.log(JSON.parse(dados));
@@ -39,7 +39,7 @@
 
         carrega_objeto = function(unidade){
             $("#cnes").val(unidade.cnes);
-            $("#descricao").val(unidade.nome);
+            $("#descricao").val(unidade.descricao);
             $("#endereco").val(unidade.endereco);
         }
     });

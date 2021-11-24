@@ -6,7 +6,7 @@
         if(get){
             $.post('components/core/controllers/vacina/controller_vacina.php',{
                 'acao': 'selecionar_objeto',
-                'cpf': get
+                'id': get
             })
             .done((dados)=>{
                 console.log(JSON.parse(dados));
@@ -44,7 +44,8 @@
         carrega_objeto = function(vacina){
             $("#lote").val(vacina.lote);
             $("#descricao").val(vacina.descricao);
-            $("#validade").val(vacina.validade);
+            var data = vacina.validade.split('-');
+            $("#validade").val(data[2] + "/" + data[1] + '/' + data[0]);
             $("#fabricante").val(vacina.fabricante);
             $("#dose").val(vacina.dose);
             $("#quantidade").val(vacina.quantidade);
