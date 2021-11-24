@@ -13,19 +13,19 @@ require_once('components/templates/header.php'); ?>
             </div>
             <form>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_cpf">
                         <label for="cpf" class="form-label">CPF</label>
                         <input type="text" class="form-control" id="cpf" placeholder="Digite o CPF" name="cpf" onkeypress="$(this).mask('000.000.000-00');">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_vacina">
                         <label for="descricao" class="form-label">Vacina:</label>
                         <select name="vacina" id="vacina" class="form-control"></select>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_dose">
                         <label for="dose" class="form-label">Dose:</label>
                         <input type="number" class="form-control" id="dose" placeholder="Dose Aplicada" name="dose" max="5">
                     </div>

@@ -105,6 +105,15 @@ class dao_pessoa{
         return $sql->fetchAll();
     }
 
+    public function valida_cpf($cpf){
+        $sql = "SELECT COUNT(cpf) as total FROM $this->tabela WHERE cpf = :cpf";
+        $sql = conecta::prepare($sql);
+        $sql->bindParam(":cpf", $cpf);
+        $sql->execute();
+
+        return intval($sql->fetch()->total) > 0 ? true : false;
+    }
+
     private function bind_all($sql, $pessoa){
         $sql->bindValue(":cpf", $pessoa->get_cpf(), PDO::PARAM_STR);
         $sql->bindValue(":nome", $pessoa->get_nome(), PDO::PARAM_STR);

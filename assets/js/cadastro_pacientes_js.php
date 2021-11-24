@@ -1,5 +1,7 @@
 <script>
     var get = '<?=isset($_GET['id']) ? $_GET['id'] : ''?>';
+    var campos = ['cpf', 'vacina', 'dose'];
+    var valida = false;
 
     $(document).ready(function() {
         if(get){
@@ -15,17 +17,21 @@
         
         $('#btn_salvar').click(function(e){
             e.preventDefault();
-            $.post('components/core/controllers/unidade/controller_unidade.php', {
-                'acao': 'inserir',
-                'objeto': JSON.stringify({
-                    'cnes': $("#cnes").val(),
-                    'descricao': $("#descricao").val(),
-                    'endereco': $("#endereco").val()
+            if(valida_formulario(campos) && valida){
+                $.post('components/core/controllers/unidade/controller_unidade.php', {
+                    'acao': 'inserir',
+                    'objeto': JSON.stringify({
+                        'cpf': $("#cpf").val(),
+                        'vacina': $("#vacina").val(),
+                        'dose': $("#dose").val(),
+                        'unidade': $("#unidade").val()
+                    })
                 })
-            })
-            .done(()=>{
-                window.location.href = "unidades.php";
-            })
+                .done(()=>{
+                    $("#cpf").val('');
+                    $("#dose").val('');
+                })
+            }
         })
 
         $('#btn_unidades').click(function(e){
@@ -82,6 +88,18 @@
             })
         }
         $.carrega_selected_unidade('');
+        $("#cpf").focusout(()=>{
+            $.post('components/core/controllers/pessoa/controller_pessoa.php',{
+                'acao': 'valida_cpf',
+                'cpf': $("#cpf").val()
+            }).done((resposta)=>{
+                $(".invalido").remove();
+                valida = JSON.parse(resposta);
+                if(!valida){
+                    $("#div_cpf").append('<span class="invalido">Este cpf não existe</span>')
+                }
+            })
+        })
 
     });
 </script>   
