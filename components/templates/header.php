@@ -29,39 +29,40 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <header>
+    <header>
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
                         <div class="container-fluid">
-                                <ul class="navbar-nav me-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link btn btn-primary" href="home.php"> Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link btn btn-primary" href="pessoas.php">Usuários</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link btn btn-primary" href="pacientes.php">Paciente</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link btn btn-primary" href="vacinas.php">Vacinas</a>
-                                    </li>
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link" href="javascript:void(0)">Profissional</a>
-                                    </li> -->
-                                    <li class="nav-item">
-                                        <a class="nav-link btn btn-primary" href="unidades.php">Unidade</a>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-danger" onClick="window.location.href = 'components/core/sessao/deslogar.php'">deslogar</button>
-                            </div>
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="home.php"> Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pessoas.php">Pessoas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pacientes.php">Paciente</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="vacinas.php">Vacinas</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="javascript:void(0)">Profissional</a>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="unidades.php">Unidade</a>
+                                </li>
+                            </ul>
+                            <button class="btn btn-danger" onClick="window.location.href = 'components/core/sessao/deslogar.php'">deslogar</button>
+                        
                         </div>
-                    </nav>                   
-                </div>
+                    </nav>  
+                </div>                     
             </div>
-        </header>
+        </div>
+    </header>
 
         
     
