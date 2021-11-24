@@ -1,5 +1,6 @@
 <script>
     var get = '<?=isset($_GET['id']) ? $_GET['id'] : ''?>';
+    var campos = ['cnes', 'descricao', 'endereco']
 
     $(document).ready(function() {
         if(get){
@@ -15,17 +16,20 @@
         
         $('#btn_salvar').click(function(e){
             e.preventDefault();
-            $.post('components/core/controllers/unidade/controller_unidade.php', {
-                'acao': 'inserir',
-                'objeto': JSON.stringify({
-                    'cnes': $("#cnes").val(),
-                    'descricao': $("#descricao").val(),
-                    'endereco': $("#endereco").val()
+            if (validar_formulario(campos)) {
+                
+                $.post('components/core/controllers/unidade/controller_unidade.php', {
+                    'acao': 'inserir',
+                    'objeto': JSON.stringify({
+                        'cnes': $("#cnes").val(),
+                        'descricao': $("#descricao").val(),
+                        'endereco': $("#endereco").val()
+                    })
                 })
-            })
-            .done(()=>{
-                window.location.href = "unidades.php";
-            })
+                .done(()=>{
+                    window.location.href = "unidades.php";
+                })
+            }
         })
 
         $('#btn_unidades').click(function(e){

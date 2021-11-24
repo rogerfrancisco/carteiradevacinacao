@@ -1,5 +1,6 @@
 <script>
     var get = '<?=isset($_GET['id']) ? $_GET['id'] : ''?>';
+    var campos = ['lote', 'descricao', 'validade', 'fabricante', 'dose', 'quantidade']
 
     $(document).ready(function() {
         if(get){
@@ -13,31 +14,27 @@
             })
         } 
         
-        $(function(){
-            $("#form_validate").validate();
-        });
                 
         $('#btn_salvar').click(function(e){
-            
-            if ( $("#form_validate").validate()) {
+            e.preventDefault();
+            if (validar_formulario(campos)) {
                 
-                $("#form_validate").AjaxForm({
-                    type:"POST",
-                    dataType: "JSON",
-                    url: 'components/core/controllers/vacina/controller_vacina.php',
-                    data:{
-                        'acao': 'inserir'
-                    },
-
-                    success: function(){
-                        window.location.href = "vacinas.php";
-                    }
+                $.post('components/core/controllers/vacina/controller_vacina.php', {
+                    'acao': 'inserir',
+                    'objeto': JSON.stringify({
+                        'lote': $("#lote").val(),
+                        'descricao': $("#descricao").val(),
+                        'validade': $("#validade").val(),
+                        'fabricante': $("#fabricante").val(),
+                        'dose': $("#dose").val(),
+                        'quantidade': $("#quantidade").val()
+                    })
+                })
+                .done(()=>{
+                    window.location.href = "vacinas.php";
                 })
             }
-            e.preventDefault();
         })
-
-
 
         $('#btn_vacinas').click(function(e){
             e.preventDefault();

@@ -9,9 +9,7 @@ require_once('components/templates/header.php'); ?>
                 <div class="col-md-10">
                     <h2>Vacinar Paciente</h2>
                 </div>
-                <div class="col-md-2">
-                    <button id="" class="btn btn-primary">Voltar</button>
-                </div>
+                
             </div>
             <form>
                 <div class="row">
@@ -23,7 +21,7 @@ require_once('components/templates/header.php'); ?>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="descricao" class="form-label">Vacina:</label>
-                        <input type="text" class="form-control" id="descricao" placeholder="Digite a Vacina Aplicada" name="descricao">
+                        <select name="fk_vacina" id="vacina" class="form-control"></select>
                     </div>
                 </div>
                 <div class="row">

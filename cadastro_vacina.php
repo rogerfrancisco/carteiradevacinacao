@@ -17,42 +17,42 @@ require_once('components/templates/header.php'); ?>
             <form id="form_validate">
                                 
                 <div class=" form-group row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_lote">
                         <label for="lote" class="form-label">Lote:</label>
                         <input type="text"  name="lote" id="lote"  placeholder="Digite o lote" class="form-control" required minlength="8" onkeypress="$(this).mask('0000000-0');">
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_descricao">
                         <label for="descricao" class="form-label">Descrição:</label>
                         <input type="text" name="descricao" id="descricao" placeholder="Digite o nome da vacina" required class="form-control"> 
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_validade">
                         <label for="validade" class="form-label">Validade:</label>
                         <input type="text" name="validade" id="validade" required>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_fabricante">
                         <label for="fabricante" class="form-label">Fabricante:</label>
                         <input type="text" name="fabricante" id="fabricante" placeholder="Digite o fabricante" class="form-control" required >
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_dose">
                         <label for="dose" class="form-label">Dose:</label>
                         <input type="number" max="5" name="dose" id="dose" placeholder="Digite a dose" class="form-control" required>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_quantidade">
                         <label for="quantidade" class="form-label">Quantidade:</label>
                         <input type="number" name="quantidade" id="quantidade" placeholder="Digite a quantidade" class="form-control" required>
                     </div>

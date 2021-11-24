@@ -1,5 +1,6 @@
 <script>
     var get = '<?=isset($_GET['id']) ? $_GET['id'] : ''?>';
+    var campos = ['nome', 'nome_mae', 'cartao_sus', 'endereco', 'cpf', 'telefone_1', 'telefone_2']
 
     $(document).ready(function() {
         if(get){
@@ -15,24 +16,27 @@
         
         $('#btn_salvar').click(function(e){
             e.preventDefault();
-            $.post('components/core/controllers/pessoa/controller_pessoa.php', {
-                'acao': 'inserir',
-                'objeto': JSON.stringify({
-                    'cpf': $("#cpf").val(),
-                    'nome': $("#nome").val(),
-                    'nome_mae': $("#nome_mae").val(),
-                    'cartao_sus': $("#cartao_sus").val(),
-                    'endereco': $("#endereco").val(),
-                    'telefone_1': $("#telefone_1").val(),
-                    'telefone_2': $("#telefone_2").val(),
-                    'profissional': $("#check_profissional").prop('checked') ? "S": 'N',
-                    'formacao': $("#formacao").val(),
-                    'unidade': $("#unidade").val()
+            if (validar_formulario(campos)) {
+                $.post('components/core/controllers/pessoa/controller_pessoa.php', {
+                    'acao': 'inserir',
+                    'objeto': JSON.stringify({
+                        'cpf': $("#cpf").val(),
+                        'nome': $("#nome").val(),
+                        'nome_mae': $("#nome_mae").val(),
+                        'cartao_sus': $("#cartao_sus").val(),
+                        'endereco': $("#endereco").val(),
+                        'telefone_1': $("#telefone_1").val(),
+                        'telefone_2': $("#telefone_2").val(),
+                        'profissional': $("#check_profissional").prop('checked') ? "S": 'N',
+                        'formacao': $("#formacao").val(),
+                        'unidade': $("#unidade").val()
+                    })
+
                 })
-            })
-            .done(()=>{
-                window.location.href = "pessoas.php";
-            })
+                .done(()=>{
+                    window.location.href = "pessoas.php";
+                })
+            }        
         })
 
         $('#btn_pessoas').click(function(e){

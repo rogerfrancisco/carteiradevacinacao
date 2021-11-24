@@ -15,19 +15,19 @@ require_once('components/templates/header.php'); ?>
             </div>
             <form>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_cnes">
                         <label for="cnes" class="form-label">CNES:</label>
                         <input type="text" class="form-control" id="cnes" placeholder="Digite o CNES" name="cnes" onkeypress="$(this).mask('0-0000');">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_descricao">
                         <label for="descricao" class="form-label">Descrição:</label>
                         <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição" name="descricao">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="div_endereco">
                         <label for="endereco" class="form-label">Endereço:</label>
                         <input type="text" class="form-control" id="endereco" placeholder="Digite o Endereço" name="endereco">
                     </div>
