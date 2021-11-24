@@ -37,7 +37,7 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
                         <div class="container-fluid">
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="home.php"> Home</a>
+                                    <a class="nav-link" href="home.php">  Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="minhas_vacinas.php">Minhas Vacinas</a>
