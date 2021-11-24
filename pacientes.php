@@ -45,6 +45,6 @@ require_once('components/templates/header.php'); ?>
 
 
 <?php 
-    require_once('assets/js/cadastro_unidades_js.php');
+    require_once('assets/js/cadastro_pacientes_js.php');
     require_once('components/templates/footer.php'); 
 ?>
