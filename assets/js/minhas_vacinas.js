@@ -39,3 +39,4 @@ $carrega_datatable = function(){
         
     })
 }
+$carrega_datatable();
