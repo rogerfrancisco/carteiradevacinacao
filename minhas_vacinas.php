@@ -17,17 +17,15 @@ require_once('components/templates/header.php'); ?>
 
 
         <div class="panel-body">
-            <table id="tab_pessoas">
+            <table id="tab_minhas_vacinas">
                 <thead>
                     <tr>
-                        <th>Vacina 1</th>
-                        <th>Vacina 2</th>
-                        <th>Vacina 3</th>
-                        <th>Vacina 4</th>
-                        <th>Vacina 5</th>
-                        <th>Vacina 6</th>
-                        <th>Vacina 7</th>
-                        <th></th>
+                        <th>descricao</th>
+                        <th>dose 1</th>
+                        <th>dose 2</th>
+                        <th>dose 3</th>
+                        <th>dose 4</th>
+                        <th>dose 5</th>
                     </tr>
                 </thead>
             </table>
