@@ -18,7 +18,7 @@
         $('#btn_salvar').click(function(e){
             e.preventDefault();
             if(valida_formulario(campos) && valida){
-                $.post('components/core/controllers/unidade/controller_unidade.php', {
+                $.post('components/core/controllers/pessoa_nn_vacina/controller_pessoa_nn_vacina.php', {
                     'acao': 'inserir',
                     'objeto': JSON.stringify({
                         'cpf': $("#cpf").val(),
