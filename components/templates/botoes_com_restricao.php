@@ -8,5 +8,5 @@
     <a class="nav-link restrito" href="unidades.php">Unidade</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link restrito" href="pacientes.php">Paciente</a>
+    <a class="nav-link restrito" href="pacientes.php">Vacinar Paciente</a>
 </li>

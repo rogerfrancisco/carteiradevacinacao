@@ -49,12 +49,12 @@ require_once('components/core/apoio/valida_permissao.php'); ?>
                             </ul>
                             <div>
                                 <ul>
-                                    <li>
+                                    <div>
                                         <button class="btn btn-warning" onClick="window.location.href = 'editar_senha.php'">Editar Senha</button>
-                                    </li>
-                                    <li>
+                                    </div>
+                                    <div>
                                         <button class="btn btn-danger" onClick="window.location.href = 'components/core/sessao/deslogar.php'">deslogar</button>
-                                    </li>
+                                    </div>
                                 </ul>
                             </div>
                         </div>
