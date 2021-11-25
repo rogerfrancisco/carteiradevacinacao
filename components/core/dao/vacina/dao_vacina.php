@@ -78,7 +78,7 @@ class dao_vacina{
     }
 
     private function bind_all($sql, $vacina){
-        if($vacina->get_id() != null){
+        if($vacina->get_id()){
             $sql->bindValue(":id", $vacina->get_id(), PDO::PARAM_INT);
         }
         $sql->bindValue(":lote", $vacina->get_lote(), PDO::PARAM_STR);
